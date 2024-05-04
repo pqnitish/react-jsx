@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+      let value = false;
+      //let text = "Seize the day";
+      //let para = <p>Seize the day</p>
+      //using variable in jsx
+     // let para = <p>{text}</p>
+     //conditional rendering jsx
+     let para = <p>{value===true? "Seize the day" :"Hello world"}</p>
+
+      let rootDOM = ReactDOM.createRoot(document.getElementById("root"));
+      rootDOM.render(para)
+    </script>
+  </body>
+</html>
